@@ -17,9 +17,21 @@ function findAll(match, array) {
                 ret.push(v);
             }
         }
-        else if(typeof match == "number" && !Object.is(match, NaN) && !Object.is(match, -Infinity) && !Object.is(match, Infinity) && typeof v == "string" && typeof v != NaN){
+        else if(typeof match == "number" &&
+            !Object.is(match, NaN) &&
+            !Object.is(match, -Infinity) &&
+            !Object.is(match, Infinity) &&
+            !Object.is(match, -0) &&
+            typeof v == "string" &&
+            v.trim() != ""
+        ){
 
         }
     }
     return ret;
 }
+
+
+
+
+ssss
